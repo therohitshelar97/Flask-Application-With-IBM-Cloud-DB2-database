@@ -1,0 +1,2 @@
+[django.db.backends]
+ibm_db_django = ibm_db_django

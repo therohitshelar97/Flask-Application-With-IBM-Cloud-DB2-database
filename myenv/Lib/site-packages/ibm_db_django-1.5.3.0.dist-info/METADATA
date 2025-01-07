@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ibm_db_django
+Version: 1.5.3.0
+Summary: DB2 support for Django framework.
+Home-page: http://pypi.python.org/pypi/ibm_db_django/
+Author: Ambrish Bhargava, Tarun Pasrija, Rahul Priyadarshi
+Author-email: opendev@us.ibm.com
+Maintainer: IBM Application Development Team
+Maintainer-email: opendev@us.ibm.com, ibm_db@googlegroups.com
+License: Apache License 2.0
+Keywords: django ibm_db_django backends adapter IBM Data Servers database db2
+Platform: All
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Microsoft :: Windows :: Windows NT/2000
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Database :: Front-Ends
+License-File: LICENSE
+Requires-Dist: ibm_db>=3.0.1
+Requires-Dist: django>=4.2
+Requires-Dist: six
+Requires-Dist: regex
+
+DB2 support for Django framework.
