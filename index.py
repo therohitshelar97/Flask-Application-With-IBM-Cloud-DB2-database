@@ -71,6 +71,36 @@ def Enter():
     ibm_db.exec_immediate(conn, insert)
     return redirect(url_for('Index'))
 
+@app.route('/delete')
+def Delete():
+    id = request.args.get('id')
+    DelQuery = "delete from SB4C where id = {}".format(id)
+    ibm_db.exec_immediate(conn, DelQuery)
+    return redirect(url_for('Index'))
+
+@app.route('/update')
+def Update():
+    id = request.args.get('id')
+    SelectOne = "Select * from SB4C where id = {}".format(id) 
+    selectStmt = ibm_db.exec_immediate(conn, SelectOne)
+    data = ibm_db.fetch_assoc(selectStmt)
+    print(data)
+    return render_template('Update.html',data=data) 
+
+@app.route('/update1',methods=['POST'])
+def Update1():
+    id = request.form.get("id")
+    fname = request.form.get("fname")
+    lname = request.form.get("lname")
+    city = request.form.get("city")
+    ccode = request.form.get("ccode")
+    print(id,fname,lname,city,ccode)
+    insert = "update SB4C set fname='{}', lname='{}', city='{}', ccode='{}' where id = '{}'".format(fname,lname,city,ccode,id)
+    ibm_db.exec_immediate(conn, insert)
+    return redirect(url_for('Index'))
+
+
+
 
 
 if __name__=='__main__':

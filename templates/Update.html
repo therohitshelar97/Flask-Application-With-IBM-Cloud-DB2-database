@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .sh{
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .header{
+            padding: 10px;
+            text-align: center;
+            background-color: aqua;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h4>Web-Connections with DB2</h4>
+    </div>
+    <div class="container">
+        <div class="row shadow sh">
+            <div class="col-6 offset-3">
+                <form method="POST" action="{{url_for('Update1')}}">
+                    id:<input type="number" name="id" value="{{data['ID']}}" class="form-control" />
+                    First_Name : <input type="text" name="fname" value="{{data['FNAME']}}" class="form-control" />
+                    Last_Name : <input type="text" name="lname" value="{{data['LNAME']}}" class="form-control" />
+                    City : <input type="text" name="city" value="{{data['CITY']}}" class="form-control" />
+                    City Code : <input type="text" name="ccode" value="{{data['CCODE']}}" class="form-control" />
+                    <br><br>
+                    <input type="submit" class="btn btn-success" value="Update" />
+            
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
