@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         .sh{
@@ -26,7 +26,7 @@
         <div class="row shadow sh">
             <div class="col-6 offset-3">
                 <form method="POST" action="{{url_for('Update1')}}">
-                    id:<input type="number" name="id" value="{{data['ID']}}" class="form-control" />
+                    <input type="number" name="id" value="{{data['ID']}}" class="form-control d-none"  />
                     First_Name : <input type="text" name="fname" value="{{data['FNAME']}}" class="form-control" />
                     Last_Name : <input type="text" name="lname" value="{{data['LNAME']}}" class="form-control" />
                     City : <input type="text" name="city" value="{{data['CITY']}}" class="form-control" />
