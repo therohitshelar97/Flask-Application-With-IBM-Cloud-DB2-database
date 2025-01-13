@@ -26,7 +26,7 @@
         <div class="row shadow sh">
             <div class="col-6 offset-3">
                 <form method="POST" action="{{url_for('Update1')}}">
-                    <input type="number" name="id" value="{{data['ID']}}" class="form-control d-none"  />
+                    <input type="number" name="id" value="{{data['ID']}}" class="form-control " readonly  />
                     First_Name : <input type="text" name="fname" value="{{data['FNAME']}}" class="form-control" />
                     Last_Name : <input type="text" name="lname" value="{{data['LNAME']}}" class="form-control" />
                     City : <input type="text" name="city" value="{{data['CITY']}}" class="form-control" />
