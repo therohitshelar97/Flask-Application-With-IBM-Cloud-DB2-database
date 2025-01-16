@@ -1,6 +1,6 @@
 import os
 
-os.add_dll_directory('C:\\Personal\\IBM-Cloud-Database-Connections\\myenv\Lib\\site-packages\\clidriver\\bin') 
+os.add_dll_directory('C:\\Personal\\IBM-Cloud-Database-Connections\\myenv\\Lib\\site-packages\\clidriver\\bin') 
 
 import ibm_db
 import ibm_db_dbi
